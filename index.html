@@ -38,7 +38,9 @@
         /*font-size: 1.75rem !important;*/
       }
       h3 {
-        font-weight: normal;
+        text-transform: uppercase;
+        letter-spacing: .15rem;
+        font-size: 1.25rem !important;
       }
       p, li {
         line-height: 1.75rem !important;
@@ -76,7 +78,7 @@
       }
 
       blockquote {
-        border-left: solid 2px white;
+        border-left: solid 2px rgba(0, 0, 0, .8);
         padding-left: 12px;
         margin-left: 8px;
       }
@@ -103,15 +105,15 @@ by Maxime Le Conte des Floris (@mlcdf)
 
 ## Summary
 
-### 1. The Case for Accessibility
+1. The Case for Accessibility
 
-### 2. Accessibility 101
+2. Accessibility 101
 
 ---
 
 ## The Case for Accessibility
 
-WTF is accessilibity?
+### WTF is accessilibity?
 --
 count: false
 > Accessibility is the practice of making your websites usable by as many people as possible
@@ -124,7 +126,7 @@ count: false
 
 ## The Case for Accessibility
 
-Why accessilibity?
+### Why accessilibity?
 --
 count: false
 - provide people equal access and equal opportunity to information;
@@ -138,7 +140,7 @@ count: false
 
 ## Accessibility 101
 
-Typography
+### Typography
 
 ![](../img/Screenshot from 2017-03-11 12-00-31.png)
 
@@ -147,7 +149,7 @@ count: false
 
 ## Accessibility 101
 
-Typography
+### Typography
 
 - Don't use web fonts (and if you have really to, load it async)
 - Be careful with thin fonts. They're fine for title, not for body text.
@@ -160,11 +162,14 @@ Typography
 
 ## Accessibility 101
 
-Colors
+### Colors
 
 ![](/img/without-colors.png)
 --
 ![](/img/with-colors.png)
+
+--
+count: false
 
 - Don't use colors as the only visual means of conveying information.
 - You can use nuances (black, white & grey) tho.
@@ -173,7 +178,7 @@ Colors
 
 ## Accessibility 101
 
-Focus
+### Focus
 
 ![](/img/Screenshot from 2017-04-10 01-05-26.png)
 
@@ -183,37 +188,28 @@ Focus
 
 ## Accessibility 101
 
-Focus
-
-![](/img/Screenshot from 2017-04-10 01-05-26.png)
-
-- Don't remove the :focus of your html element or override it properly (visible and not relaying only on color).
-
----
-
-## Accessibility 101
-
-Icons
+### Icons
 
 - Seriously, don’t use icon fonts. Screenreaders can't read them and they fail often and poorly.
-- Use SVG. It's awesome.
+- SVGs are made for this and they're awesome.
 
 ---
 
 ## Accessibility 101
 
-HTML
+### HTML
 
 - Don't forget to specify the `lang` attribute of the `html` tag.
 - Always add `alt` to your images.
 - Don't skip headings (`h1` then `h2`).
 - Use the `button` element when you need to.
+- Write semantics HTML
 
 ---
 
 ## Accessibility 101
 
-`#perfmatters`
+### Performance
 
 - Before adding any new dependencies/librairies, make sure it's worth it.
 - Prefer server-side rendering to client-side rendering.
@@ -221,9 +217,10 @@ HTML
 
 ---
 
-## Going further
+class: center, middle
+## Thanks!
 
-- The Veil of Ignorance http://mrmrs.io/writing/2016/03/23/the-veil-of-ignorance/
+https://github.com/mlcdf/a11y-talk
 
     </textarea>
     <script src="vendors/remark-latest.min.js">
