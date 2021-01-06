@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Accessibility on the web</title>
+    <meta charset="utf-8">
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont,
+                     'avenir next', avenir,
+                     ubuntu,
+                     roboto, noto,
+                     'segoe ui', arial,
+                     helvetica, 'helvetica neue',
+                     sans-serif;
+      }
+      .remark-slide-content {
+        background: #fbf1a9;
+        color: rgba(0, 0, 0, .8);
+      }
+      a {
+        color: inherit;
+      }
+      h1, h2 {
+        font-weight: bold;
+      }
+      h1 {
+        font-size: 5rem !important;
+        margin-bottom: 0;
+      }
+      .subtitle {
+        text-transform: uppercase;
+        font-size: 1rem;
+        letter-spacing: .2rem;
+        margin-top: 0;
+      }
+      h2 {
+        padding-top: 1rem;
+        /*font-size: 1.75rem !important;*/
+      }
+      h3 {
+        text-transform: uppercase;
+        letter-spacing: .15rem;
+        font-size: 1.25rem !important;
+      }
+      p, li {
+        line-height: 1.75rem !important;
+        margin-bottom: 1rem;
+      }
+      ul li {
+        list-style-type: '→  ';
+      }
+      img {
+        border-radius: 2px;
+        margin-right: 1rem;
+      }
+
+      .all-caps-good {
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+      }
+
+      .all-caps-wrong {
+        text-transform: uppercase;
+      }
+
+
+      .remark-code, .remark-inline-code {
+        padding: .3rem !important;
+        border-radius: 3px;
+        background-color: rgba(255, 255, 255, .8) !important;
+        font-family: Consolas,
+                     monaco,
+                     monospace;
+      }
+
+      strong {
+        color: pink;
+      }
+
+      blockquote {
+        border-left: solid 2px rgba(0, 0, 0, .8);
+        padding-left: 12px;
+        margin-left: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# A11Y
+.subtitle[(Accessibility)]
+
+</br>
+by Maxime Le Conte des Floris (@mlcdf)
+
+</br>
+</br>
+</br>
+</br>
+</br>
+
+---
+
+## Summary
+
+1. The Case for Accessibility
+
+2. Accessibility 101
+
+---
+
+## The Case for Accessibility
+
+### WTF is accessilibity?
+--
+count: false
+> Accessibility is the practice of making your websites usable by as many people as possible
+--
+count: false
+ — we traditionally think of this as being about people with disabilities, but really it also covers other groups such as those using mobile devices, or those with slow network connections.
+&mdash; "What is accessibility?", *Mozilla Developer Network*
+
+---
+
+## The Case for Accessibility
+
+### Why accessilibity?
+--
+count: false
+- Provide people equal access and equal opportunity to information.
+- Increase audience.
+- Improve maintainability and efficiency.
+- Improve and regain reputation.
+- Satisfy existing and future legal requirements.
+- And much more...
+
+---
+
+## Accessibility 101
+
+### Typography
+
+![](../img/Screenshot from 2017-03-11 12-00-31.png)
+
+---
+count: false
+
+## Accessibility 101
+
+### Typography
+
+- Don't use web fonts (and if you have really to, load them async).
+- Be careful with thin fonts. They're fine for titles, not for body text.
+- Don't go below 16px for the font size. 18px is the sweat spot.
+- Check the constract between the font and the background. Follow the WCAG guidelines. Use tools like: https://leaverou.github.io/contrast-ratio/
+- .all-caps-wrong[`All caps`] are fine for less than one line of text.
+- Add some .all-caps-good[`letter-spacing`] on .all-caps-wrong[`All caps`].
+
+---
+
+## Accessibility 101
+
+### Colors
+
+![](/img/without-colors.png)
+--
+![](/img/with-colors.png)
+
+--
+count: false
+
+- Don't use colors as the only visual means of conveying information.
+- You can use nuances (black, white & grey) tho.
+
+---
+
+## Accessibility 101
+
+### Focus
+
+![](/img/Screenshot from 2017-04-10 01-05-26.png)
+
+- Don't remove the :focus of your html element or override it properly (visible and not relaying only on color).
+
+---
+
+## Accessibility 101
+
+### Icons
+
+- Seriously, don’t use icon fonts. Screenreaders can't read them and they fail often and poorly.
+- SVGs are made for this and they're awesome.
+
+---
+
+## Accessibility 101
+
+### HTML
+
+- Don't forget to specify the `lang` attribute of the `html` tag.
+- Always add `alt` to your images.
+- Don't skip headings (`h1` then `h2`).
+- Use the `button` element when you need to.
+- Write semantics HTML.
+
+---
+
+## Accessibility 101
+
+### Performance
+
+- Before adding any new dependencies/librairies, make sure it's worth it.
+- Prefer server-side rendering to client-side rendering.
+- Optimize your assets.
+
+---
+
+class: center, middle
+## Thanks!
+
+https://github.com/mlcdf/a11y-talk
+
+    </textarea>
+    <script src="vendors/remark-latest.min.js">
+    </script>
+    <script>
+    var slideshow = remark.create({
+  highlightStyle: 'github'
+});
+</script>
+  </body>
+</html>
