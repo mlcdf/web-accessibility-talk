@@ -2,66 +2,71 @@
 <html lang="fr">
   <head>
     <title>Améliorer l'accessibilité d'un site web</title>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <style>
       body {
-        font-family: -apple-system, BlinkMacSystemFont,
-                     'avenir next', avenir,
-                     roboto, noto,
-                     'Segoe ui', ubuntu, arial,
-                     helvetica, 'helvetica neue',
-                     sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir,
+          roboto, noto, "Segoe ui", ubuntu, arial, helvetica, "helvetica neue",
+          sans-serif;
       }
       .remark-slide-content {
         background: #212121;
         color: rgba(255, 255, 255, 0.95);
       }
-      
+
       a {
         color: inherit;
       }
-      
-      h1, h2 {
+
+      h1,
+      h2 {
         font-weight: 600;
         color: #FF4081;
       }
-      
+
       h1 {
         color: #FF4081;
         font-size: 4rem !important;
         margin-bottom: 0;
         line-height: 4.2rem;
       }
-      
+
       .subtitle {
         font-size: 2rem;
         margin-top: 0;
         color: white;
       }
-            
+      
+      .unicorn {
+        height: 10px;
+        width: 10px;
+        background-image("https://cdn.glitch.com/c965ecd4-0a68-4811-8b1e-4a51ccfb00e0%2Fslack-imgs.com.png?v=1611100364723")
+      }
+
       .avatar {
         border-radius: 50%;
         height: 160px;
         width: 160px;
         margin-bottom: 16px;
       }
-      
+
       h2 {
         margin-top: 1rem;
         /*font-size: 1.75rem !important;*/
       }
       h3 {
         text-transform: uppercase;
-        letter-spacing: .15rem;
+        letter-spacing: 0.15rem;
         font-size: 1.25rem !important;
         color: #18FFFF;
       }
-      p, li {
+      p,
+      li {
         line-height: 1.75rem !important;
         margin-bottom: 1rem;
       }
       ul li {
-        list-style-type: '→  ';
+        list-style-type: "→  ";
       }
       img {
         border-radius: 2px;
@@ -70,41 +75,40 @@
 
       .all-caps-good {
         text-transform: uppercase;
-        letter-spacing: .2rem;
+        letter-spacing: 0.2rem;
       }
 
       .all-caps-wrong {
         text-transform: uppercase;
       }
-      
+
       .semi-bold {
         font-weight: 600;
       }
 
-      .remark-code, .remark-inline-code {
-        padding: .3rem !important;
+      .remark-code,
+      .remark-inline-code {
+        padding: 0.3rem !important;
         border-radius: 3px;
-        background-color: rgba(255, 255, 255, .8) !important;
-        font-family: Consolas,
-                     monaco,
-                     monospace;
+        background-color: rgba(255, 255, 255, 0.8) !important;
+        font-family: Consolas, monaco, monospace;
       }
-      
+
       .remark-slide-number {
         opacity: 1;
-        color: rgba(0, 0, 0, .7);
+        color: rgba(0, 0, 0, 0.7);
       }
 
       strong {
         color: pink;
       }
-      
+
       .twitter {
-        color: #FFC400
+        color: #FFC400;
       }
 
       blockquote {
-        border-left: solid 2px rgba(0, 0, 0, .8);
+        border-left: solid 2px rgba(0, 0, 0, 0.8);
         padding-left: 12px;
         margin-left: 8px;
       }
@@ -120,10 +124,11 @@ class: center, middle
 .subtitle[(sans utiliser ARIA !)]
 
 </br>
-.semi-bold.twitter[@mlcdf]
+.semi-bold.twitter[Maxime Le Conte des Floris &mdash; @mlcdf]
     
 </br>
 </br>
+<div class="unicorn"></div>
 
 ---
 
@@ -153,16 +158,13 @@ class: center, middle
   - Dev front/java pour la CAPEB
   - Dev front/java pour EDF
   - Dev front/python/devops pour La Banque Postale
-     </div>
+
 </div>
 
-
-
 ---
-
+class: center, middle
+  
 ## Qui êtes-vous ?
-
-
 
 ---
 
@@ -281,17 +283,16 @@ class: center, middle
 ---
 
 class: center, middle
-## Thanks!
+## Merci !
 
 https://github.com/mlcdf/a11y-talk
 
     </textarea>
-    <script src="vendors/remark-latest.min.js">
-    </script>
+    <script src="vendors/remark-latest.min.js"></script>
     <script>
-    var slideshow = remark.create({
-  highlightStyle: 'github'
-});
-</script>
+      var slideshow = remark.create({
+        highlightStyle: "github"
+      });
+    </script>
   </body>
 </html>
