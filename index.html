@@ -38,9 +38,13 @@
       }
       
       .unicorn {
-        height: 10px;
-        width: 10px;
-        background-image("https://cdn.glitch.com/c965ecd4-0a68-4811-8b1e-4a51ccfb00e0%2Fslack-imgs.com.png?v=1611100364723")
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        height: 128px;
+        width: 100%;
+        background-repeat: repeat-x;
+        background-image: url("https://cdn.glitch.com/c965ecd4-0a68-4811-8b1e-4a51ccfb00e0%2Fslack-imgs.com.png?v=1611100364723");
       }
 
       .avatar {
@@ -104,7 +108,7 @@
       }
 
       .twitter {
-        color: #FFC400;
+        color: #40C4FF;
       }
 
       blockquote {
@@ -291,7 +295,8 @@ https://github.com/mlcdf/a11y-talk
     <script src="vendors/remark-latest.min.js"></script>
     <script>
       var slideshow = remark.create({
-        highlightStyle: "github"
+        highlightStyle: "github",
+        ratio: '16:9',
       });
     </script>
   </body>
