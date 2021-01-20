@@ -105,17 +105,24 @@
         color: rgba(0, 0, 0, 0.7);
       }
 
-      .twitter {
-        color: #FF4081;
-      }
 
       blockquote {
-        border-left: solid 2px rgba(0, 0, 0, 0.8);
+        border-left: solid 2px rgba(255, 0, 0, 0.8);
         padding-left: 12px;
         margin-left: 8px;
       }
       
-      .blue ''
+      .pink {
+        color: #FF4081;
+      }
+      
+      .blue {
+        color: #18FFFF;
+      }
+      
+      .yellow {
+        color: #FFD740;
+      }
     </style>
   </head>
   <body>
@@ -124,10 +131,10 @@
 class: center, middle
 
 
-# Améliorer .twitter[l'accessibilité] d'un site web (sans utiliser ARIA !)
+# Améliorer .pink[l'accessibilité] d'un site web (sans utiliser ARIA !)
 
 </br>
-.semi-bold.subtitle[Maxime Le Conte des Floris &mdash; @mlcdf]
+.semi-bold.subtitle[.blue[Maxime Le Conte des Floris] &mdash; .yellow[@mlcdf]]
     
 </br>
 </br>
@@ -137,9 +144,16 @@ class: center, middle
 
 ## Sommaire
 
-1. Plaidoyer pour l'accessibilité
+1. Définition de l'accessibilité
 
-2. Accessibility 101
+2. Les ressources
+
+3. Axes
+  
+  - Typographie
+  - Couleur
+  - Contenu
+
 
 ---
 
@@ -151,11 +165,15 @@ class: center, middle
   </div>
 
   <div style="line-height: 32px; width: 100%">
-    <span class="semi-bold" style="line-height: 24px">Maxime Le Conte des Floris</span>
+    <span class="semi-bold" style="line-height: 24px; font-size: 1.5rem">Maxime Le Conte des Floris</span>
  
   <div>Développeur web/python/devops</div>
   <div>
     Chez Conserto depuis juin 2018 (!!)
+  </div>
+  <br>
+  <div>
+    5 ans d'expériences :
   </div>
 
   - Dev front/java pour la CAPEB
@@ -171,9 +189,8 @@ class: center, middle
 
 ---
 
-## Plaidoyer pour l'accessibilité
+## Définition de l'accessibilité
 
-### Qu'est ce que l'accessibilité?
 --
 count: false
 > L'accessibilité est la mise à disposition de vos sites web au plus grand nombre. 
