@@ -1,1 +1,1 @@
-Source d'une présentation dans le cadre de la licence DAWIN.
+Source d'une présentation réalisée dans le cadre de la licence DAWIN.
