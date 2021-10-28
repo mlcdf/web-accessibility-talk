@@ -19,7 +19,7 @@
       }
 
       .subtitle {
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin-top: 0;
         color: white;
       }
@@ -27,17 +27,17 @@
       .unicorn {
         position: absolute;
         bottom: 0px;
-        left: 0px;
+        left: -20px;
         height: 128px;
-        width: 100%;
+        width: 110%;
         background-repeat: repeat-x;
         background-image: url("https://cdn.glitch.com/c965ecd4-0a68-4811-8b1e-4a51ccfb00e0%2Fslack-imgs.com.png?v=1611100364723");
       }
 
       .avatar {
         border-radius: 50%;
-        height: 160px;
-        width: 160px;
+        height: 200px;
+        width: 200px;
         margin-bottom: 16px;
       }
       
@@ -95,10 +95,14 @@
       .remark-code,
       .remark-inline-code {
         padding: 0.3rem !important;
-        border-radius: 3px;
-        background-color: rgba(255, 255, 255, 0.8) !important;
-        font-family: Consolas, monaco, monospace;
+        border-radius: 4px;
+        font-family: Consolas, monaco, Ubuntu Mono, monospace;
       }
+      
+      .remark-code {
+        padding: 1rem !important;
+      }
+
 
       .remark-slide-number {
         opacity: 1;
@@ -147,18 +151,11 @@ class: center, middle
 
 ## Sommaire
 
-1. Définition de l'accessibilité
+1. Accessibilité et handicap
 
-2. Le handicap
+2. Standards et référentiels
 
-2. Axes
-  
-  - Typographie
-  - Couleur
-  - Contenu
-
-3. Les ressources
-
+3. Bonnes pratiques : par où commencer ?
 
 ---
 
@@ -194,7 +191,9 @@ class: center, middle
 
 ---
 
-## Définition de l'accessibilité
+## Accessibilité et handicap
+
+### Définition de l'accessibilité
 
 --
 count: false
@@ -212,16 +211,16 @@ count: false
 
 ---
 
-## Le handicap
+## Accessibilité et handicap
+
+### Le handicap
   
 <div style="display:flex; flex-direction: row; width: 100%; justify-content: center;">
     <div style="width: 100%">
 
 <ul>
   <li>Les déficiences sont intrinsèques au corps.</li>
-  <li>Les incapacités sont liées au contexte.  
-  
-  </li>
+  <li>Les incapacités sont liées au contexte.</li>
 </ul>
 
   </div>
@@ -230,36 +229,61 @@ count: false
     <img src="https://cdn.glitch.com/c965ecd4-0a68-4811-8b1e-4a51ccfb00e0%2Faa4f623b-ec68-4189-8fb9-f915d19613bc.image.png?v=1611131583466">
   </div>
 
-
 </div>
 
 ---
 
-## Accessibility 101
+## Standards et référentiels
 
-### Typography
+- [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/TR/WCAG20/)
+- [Accessible Rich Internet Applications (ARIA)](https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA)
 
-![](../img/Screenshot from 2017-03-11 12-00-31.png)
+<br>
+### Opquast
+
+- [Check-list Qualité Web d'Opquast](https://checklists.opquast.com/fr/assurance-qualite-web/detail/)
+- Sur 240 recommandations, plus de 70 sont en liens avec l'accessibilité
+- Qualité web va de pair avec accessibilité
+
+---
+
+## Bonnes pratiques : par où commencer ?
+
+### Agencement de la page
+
+- Privilégier des pages simples
+- Rendre les zones cliquables plus larges
+- Ajouter une ancre vers le contenu principal de la page
 
 ---
 count: false
 
-## Accessibility 101
+## Bonnes pratiques : par où commencer ?
 
-### Typography
+### Typographie
 
-- Don't use web fonts (and if you have really to, load them async).
-- Be careful with thin fonts. They're fine for titles, not for body text.
-- Don't go below 16px for the font size. 18px is the sweat spot.
-- Check the constract between the font and the background. Follow the WCAG guidelines. Use tools like: https://leaverou.github.io/contrast-ratio/
-- .all-caps-wrong[`All caps`] are fine for less than one line of text.
-- Add some .all-caps-good[`letter-spacing`] on .all-caps-wrong[`All caps`].
+- Ne pas descendre en dessous de 16px pour la taille du texte. 18px est parfait.
+- Vérifier le contraste entre le texte et l'arrière plan.
+- Limiter l'utilisation .all-caps-wrong[`des majuscules`] à une ligne de texte. Encore mieux en ajoutant du .all-caps-good[`letter-spacing`]
+- Utiliser les polices systèmes
+
+```css
+.sans-serif {
+  font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir,
+          roboto, noto, "Segoe ui", ubuntu, arial, helvetica, "helvetica neue",
+          sans-serif;
+}
+
+.monospace {
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace
+}
+```
 
 ---
 
-## Accessibility 101
+## Bonnes pratiques : par où commencer ?
 
-### Colors
+### Couleurs
 
 ![](/img/without-colors.png)
 --
@@ -268,61 +292,45 @@ count: false
 --
 count: false
 
-- Don't use colors as the only visual means of conveying information.
-- You can use nuances (black, white & grey) tho.
+- Ne pas utiliser la couleur comme seul moyen de transmettre une information
 
 ---
 
-## Accessibility 101
+## Bonnes pratiques : par où commencer ?
 
 ### Focus
 
 ![](/img/Screenshot from 2017-04-10 01-05-26.png)
 
-- Don't remove the :focus of your html element or override it properly (visible and not relaying only on color).
+- Ne pas supprimer le :focus de vos éléments HTML ou surcharger le proprement (visible et sans jouer sur la couleur)
 
 ---
 
-## Accessibility 101
-
-### Icons
-
-- Seriously, don’t use icon fonts. Screenreaders can't read them and they fail often and poorly.
-- SVGs are made for this and they're awesome.
-
----
-
-## Accessibility 101
+## Bonnes pratiques : par où commencer ?
 
 ### HTML
 
-- Don't forget to specify the `lang` attribute of the `html` tag.
-- Always add `alt` to your images.
-- Don't skip headings (`h1` then `h2`).
-- Use the `button` element when you need to.
-- Write semantics HTML.
+- Ecrire du HTML sémantique
+- Ne pas oublier de renseigner l'attribut `lang` de la balise `html`
+- Ajouter des descriptions alternatives à vos images.
+- Ne pas sauter des titres (`h1` puis `h2`).
+- Ne pas utiliser `<a>` à la place `<button>`
 
 ---
 
-## Accessibility 101
+## Bonnes pratiques : par où commencer ?
 
-### Performance
+### Contenu
 
-- Before adding any new dependencies/librairies, make sure it's worth it.
-- Prefer server-side rendering to client-side rendering.
-- Optimize your assets.
+- Privilégier un language accessible
+- Attention aux liens et boutons "Cliquez-ici" qui sont trop ambigus
+- Définisser les abbréviations `<abbr title="Cascading Style Sheets">CSS</abbr>`
 
 ---
+class: center, middle
 
+## [Pour aller plus loin !](https://pinboard.in/u:mlcdf/t:accessibility)
 
-## Ressources
-
-- [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/TR/WCAG20/)
-- [Qualité Web 2e édition: La référence des professionnels du Web par Élie Sloïm et Laurent Denis](https://www.librairiesindependantes.com/product/9782212144338/)
-
-- [Dos and don'ts on designing for accessibility - Accessibility](https://accessibility.blog.gov.uk/2016/09/02/dos-and-donts-on-designing-for-accessibility/)
-- [https://pinboard.in/u:mlcdf/t:accessibility](https://pinboard.in/u:mlcdf/t:accessibility)
-- [https://www.apple.com/accessibility/](https://www.apple.com/accessibility/)
 ---
 
 class: center, middle
@@ -332,15 +340,16 @@ class: center, middle
 ---
 
 class: center, middle
+
 ## Merci !
 
-https://glitch.com/edit/#!/web-accessibility-talk
+[Source du diapo](https://glitch.com/edit/#!/web-accessibility-talk)
 
     </textarea>
     <script src="vendors/remark-latest.min.js"></script>
     <script>
       var slideshow = remark.create({
-        highlightStyle: "github",
+        highlightStyle: "tomorrow-night-bright",
         ratio: '16:9',
       });
     </script>
